@@ -750,6 +750,111 @@
     ex5.status = 'draft';
   })();
 
+  // Esercizio 6 "Esercizio 6" — note e legature inserite a mano dall'utente nell'app e importate
+  // dal file di progressi esportato.
+  (function seedExercise6(){
+    const EX6_NOTES = [
+      {type:"note",name:"Do",alt:"",oct:4,dur:2,dot:true}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Do",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:2,dot:false}, {type:"rest",dur:4,dot:false},
+      {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"La",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Re",alt:"",oct:4,dur:2,dot:false}, {type:"rest",dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:2,dot:true}, {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Sol",alt:"",oct:4,dur:2,dot:false}, {type:"rest",dur:4,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"La",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:2,dot:false},
+      {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Si",alt:"",oct:3,dur:4,dot:false},
+      {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:2,dot:false}, {type:"rest",dur:4,dot:false},
+      {type:"note",name:"Do",alt:"",oct:4,dur:2,dot:true}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Do",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:2,dot:false}, {type:"rest",dur:4,dot:false},
+      {type:"note",name:"Do",alt:"",oct:4,dur:2,dot:true}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Do",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Si",alt:"",oct:3,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:2,dot:true}
+    ];
+    const ex6 = exercises[5]; // id 6
+    ex6.notes = EX6_NOTES;
+    ex6.title = "Esercizio 6";
+    ex6.tempoWord = "Allegretto";
+    ex6.timeSig = [3,4];
+    ex6.bpm = 50;
+    ex6.slurs = [{from:1,to:6},{from:8,to:16},{from:18,to:24},{from:26,to:35},{from:36,to:46},{from:48,to:54},{from:57,to:62}];
+    ex6.status = 'draft';
+  })();
+
+  // Esercizio 7 "Esercizio 7" — note e legature inserite a mano dall'utente nell'app e importate
+  // dal file di progressi esportato.
+  (function seedExercise7(){
+    const EX7_NOTES = [
+      {type:"note",name:"Do",alt:"",oct:5,dur:4,dot:false}, {type:"note",name:"Si",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Sol",alt:"",oct:4,dur:2,dot:true}, {type:"note",name:"La",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:2,dot:true}, {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Re",alt:"",oct:4,dur:2,dot:false}, {type:"rest",dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:2,dot:true}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:2,dot:true},
+      {type:"note",name:"La",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Sol",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Si",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Do",alt:"",oct:5,dur:4,dot:false}, {type:"note",name:"Si",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Sol",alt:"",oct:4,dur:2,dot:true}, {type:"note",name:"La",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:2,dot:true}, {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Do",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Si",alt:"",oct:3,dur:8,dot:false}, {type:"note",name:"Si",alt:"",oct:3,dur:8,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Do",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:2,dot:true}
+    ];
+    const ex7 = exercises[6]; // id 7
+    ex7.notes = EX7_NOTES;
+    ex7.title = "Esercizio 7";
+    ex7.tempoWord = "Andante";
+    ex7.timeSig = [3,4];
+    ex7.bpm = 50;
+    ex7.slurs = [{from:0,to:4},{from:5,to:9},{from:10,to:16},{from:17,to:20},{from:22,to:26},{from:27,to:31},{from:32,to:38},{from:39,to:45},{from:46,to:56},{from:57,to:61},{from:62,to:66},{from:67,to:70},{from:71,to:76},{from:77,to:82}];
+    ex7.status = 'draft';
+  })();
+
+  // Esercizio 8 "Esercizio 8" — note e legature inserite a mano dall'utente nell'app e importate
+  // dal file di progressi esportato.
+  (function seedExercise8(){
+    const EX8_NOTES = [
+      {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Do",alt:"",oct:5,dur:8,dot:false}, {type:"note",name:"Do",alt:"",oct:5,dur:8,dot:false}, {type:"note",name:"Si",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Si",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"La",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Sol",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Sol",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"La",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Si",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Sol",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Sol",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:5,dur:8,dot:false}, {type:"note",name:"Do",alt:"",oct:5,dur:8,dot:false}, {type:"note",name:"Si",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Si",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Do",alt:"",oct:4,dur:2,dot:false}
+    ];
+    const ex8 = exercises[7]; // id 8
+    ex8.notes = EX8_NOTES;
+    ex8.title = "Esercizio 8";
+    ex8.tempoWord = "Andantino";
+    ex8.timeSig = [2,4];
+    ex8.bpm = 50;
+    ex8.slurs = [{from:4,to:5},{from:10,to:11},{from:19,to:24},{from:53,to:58},{from:59,to:64},{from:65,to:71},{from:72,to:77},{from:82,to:83}];
+    ex8.status = 'draft';
+  })();
+
   // Esercizio 15 "Tempo di marcia" trascritto dal file MusicXML fornito dall'utente
   // (letto direttamente come dati strutturati, non da immagine: qui la lettura è esatta).
   (function seedExercise15(){
