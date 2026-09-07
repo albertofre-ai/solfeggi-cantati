@@ -385,6 +385,15 @@
           <button class="toggle-btn small" id="btnDot" title="Nota puntata">punto .</button>
         </label>
         <label>&nbsp;
+          <button class="toggle-btn small" id="btnArticStacc" title="Staccato: puntino sotto la nota">stacc. •</button>
+        </label>
+        <label>&nbsp;
+          <button class="toggle-btn small" id="btnArticTen" title="Tenuto: trattino sotto la nota">tenuto –</button>
+        </label>
+        <label>&nbsp;
+          <button class="toggle-btn small" id="btnArticAccent" title="Accento: segno &gt; sotto la nota">accento &gt;</button>
+        </label>
+        <label>&nbsp;
           <button class="toggle-btn small" id="btnRest" title="Pausa invece di nota">pausa 𝄽</button>
         </label>
         <label>&nbsp;
@@ -429,9 +438,10 @@
       <details>
         <summary>Inserimento veloce da testo (per chi preferisce digitare)</summary>
         <div class="legend">
-          Formato: <code>NotaOttava:Valore[.]</code> separate da spazio, <code>|</code> ignorato (solo visivo).
+          Formato: <code>NotaOttava:Valore[.][segno]</code> separate da spazio, <code>|</code> ignorato (solo visivo).
           Pause: <code>P:Valore</code>. Alterazioni: <code>Do#4:8</code>, <code>Sib4:4.</code><br>
-          Esempio: <code>Sol4:4. Si4:8 | La4:4. Fa4:8 | La4:2 | P:8 Do5:8 Sol4:8 Mi4:8</code>
+          Segni sotto la nota (opzionali, dopo il punto ritmico se presente): <code>'</code> staccato, <code>-</code> tenuto, <code>&gt;</code> accento.
+          Esempio: <code>Sol4:4' Si4:8 | La4:4.- Fa4:8&gt; | La4:2 | P:8 Do5:8 Sol4:8 Mi4:8</code>
         </div>
         <textarea id="bulkText" placeholder="Incolla qui la sequenza..."></textarea>
         <div class="row" style="margin-top:6px;">
@@ -1974,6 +1984,11 @@ const INTONATION_SCALE_DATA = [
   /* ---------------- note entry controls ---------------- */
   const durBtns = document.getElementById('durBtns');
   let curDur = 4, curDot = false, curRest = false;
+  // curArtic: segno di articolazione sotto la nota, indipendente dal "punto" ritmico (curDot,
+  // che allunga la durata). Un solo segno per nota (mutuamente esclusivi tra loro), come nelle
+  // trascrizioni di riferimento fornite dall'utente: '' = nessuno, 'stacc' = staccato (puntino),
+  // 'ten' = tenuto (trattino), 'accent' = accento (segno >). Si applica solo alle note, non alle pause.
+  let curArtic = '';
   durBtns.querySelectorAll('button').forEach(b=>{
     b.onclick = ()=>{
       durBtns.querySelectorAll('button').forEach(x=>x.classList.remove('sel'));
@@ -1982,6 +1997,18 @@ const INTONATION_SCALE_DATA = [
   });
   const btnDot = document.getElementById('btnDot');
   btnDot.onclick = ()=>{ curDot = !curDot; btnDot.classList.toggle('sel', curDot); };
+  const articBtns = {
+    stacc: document.getElementById('btnArticStacc'),
+    ten: document.getElementById('btnArticTen'),
+    accent: document.getElementById('btnArticAccent'),
+  };
+  function setCurArtic(v){
+    curArtic = (curArtic===v) ? '' : v; // ripremere lo stesso segno lo toglie
+    Object.keys(articBtns).forEach(k=> articBtns[k].classList.toggle('sel', k===curArtic));
+  }
+  articBtns.stacc.onclick = ()=> setCurArtic('stacc');
+  articBtns.ten.onclick = ()=> setCurArtic('ten');
+  articBtns.accent.onclick = ()=> setCurArtic('accent');
   const btnRest = document.getElementById('btnRest');
   btnRest.onclick = ()=>{ curRest = !curRest; btnRest.classList.toggle('sel', curRest); };
 
@@ -1991,7 +2018,7 @@ const INTONATION_SCALE_DATA = [
       : {type:'note', name:document.getElementById('pitchName').value,
          alt:document.getElementById('pitchAlt').value,
          oct:+document.getElementById('pitchOct').value,
-         dur:curDur, dot:curDot};
+         dur:curDur, dot:curDot, artic:curArtic};
   }
   // Carica i valori di una nota esistente nei controlli di inserimento, così è pronta da modificare.
   function loadControlsFromNote(n){
@@ -1999,9 +2026,11 @@ const INTONATION_SCALE_DATA = [
     curDur = n.dur;
     curDot = !!n.dot;
     curRest = (n.type==='rest');
+    curArtic = n.artic || '';
     durBtns.querySelectorAll('button').forEach(b=>b.classList.toggle('sel', +b.dataset.v===curDur));
     btnDot.classList.toggle('sel', curDot);
     btnRest.classList.toggle('sel', curRest);
+    Object.keys(articBtns).forEach(k=> articBtns[k].classList.toggle('sel', k===curArtic));
     if(n.type==='note'){
       document.getElementById('pitchName').value = n.name;
       document.getElementById('pitchAlt').value = n.alt||'';
@@ -2108,10 +2137,13 @@ const INTONATION_SCALE_DATA = [
     renderStaff(); renderNoteList(); renderSidebar();
   };
 
+  const ARTIC_SYMBOL = {stacc:'•', ten:'–', accent:'>'};
+  const ARTIC_CHAR = {stacc:"'", ten:'-', accent:'>'}; // suffisso nel testo di inserimento veloce
+  const ARTIC_FROM_CHAR = {"'":'stacc', '-':'ten', '>':'accent'};
   function noteLabel(n){
     if(n.type==='bar') return '|';
     if(n.type==='rest') return 'Pausa ' + durLabel(n.dur) + (n.dot?'.':'');
-    return n.name + (n.alt||'') + n.oct + ' ' + durLabel(n.dur) + (n.dot?'.':'');
+    return n.name + (n.alt||'') + n.oct + ' ' + durLabel(n.dur) + (n.dot?'.':'') + (n.artic? ' '+ARTIC_SYMBOL[n.artic] : '');
   }
   function durLabel(d){ return {1:'intera',2:'metà',4:'1/4',8:'1/8',16:'1/16'}[d] || d; }
 
@@ -2189,17 +2221,20 @@ const INTONATION_SCALE_DATA = [
   function parseNoteText(txt){
     const tokens = txt.trim().split(/\s+/).filter(t=>t && t!=='|');
     const notes = [];
-    const re = /^(P|Do|Re|Mi|Fa|Sol|La|Si)(#|b)?(\d)?:(\d+)(\.)?$/i;
+    // Segno di articolazione opzionale in fondo al token, dopo l'eventuale punto ritmico:
+    // ' staccato, - tenuto, > accento (vedi ARTIC_SYMBOL/ARTIC_FROM_CHAR).
+    const re = /^(P|Do|Re|Mi|Fa|Sol|La|Si)(#|b)?(\d)?:(\d+)(\.)?(['\->])?$/i;
     const errors = [];
     tokens.forEach(tok=>{
       const m = tok.match(re);
       if(!m){ errors.push(tok); return; }
-      const [, name, alt, oct, dur, dot] = m;
+      const [, name, alt, oct, dur, dot, articChar] = m;
+      const artic = ARTIC_FROM_CHAR[articChar] || '';
       if(/^p$/i.test(name)){
         notes.push({type:'rest', dur:+dur, dot: !!dot});
       } else {
         notes.push({type:'note', name: name.charAt(0).toUpperCase()+name.slice(1).toLowerCase(),
-          alt: alt||'', oct: oct?+oct:4, dur:+dur, dot: !!dot});
+          alt: alt||'', oct: oct?+oct:4, dur:+dur, dot: !!dot, artic});
       }
     });
     return {notes, errors};
@@ -2221,7 +2256,7 @@ const INTONATION_SCALE_DATA = [
     const ex = getCurrent();
     const parts = ex.notes.filter(n=>n.type!=='bar').map(n=>{
       if(n.type==='rest') return 'P:'+n.dur+(n.dot?'.':'');
-      return n.name+(n.alt||'')+n.oct+':'+n.dur+(n.dot?'.':'');
+      return n.name+(n.alt||'')+n.oct+':'+n.dur+(n.dot?'.':'')+(n.artic? ARTIC_CHAR[n.artic] : '');
     });
     const txt = parts.join(' ');
     document.getElementById('bulkText').value = txt;
@@ -2619,6 +2654,30 @@ const INTONATION_SCALE_DATA = [
       dot.setAttribute('cx', x+11); dot.setAttribute('cy', y - (step%2===0? 4:0)); dot.setAttribute('r',1.8);
       dot.setAttribute('fill','#242018');
       g.appendChild(dot);
+    }
+    // articolazione (staccato/tenuto/accento): sempre appena sotto la testa della nota, come
+    // nelle trascrizioni di riferimento fornite dall'utente — indipendentemente dalla direzione
+    // del gambo, per semplicità e coerenza visiva a colpo d'occhio. Non riguarda le pause: il
+    // segno di articolazione ha senso solo su un suono effettivamente prodotto.
+    if(n.artic){
+      const ay = y + 9;
+      if(n.artic==='stacc'){
+        const d = document.createElementNS(svgNS,'circle');
+        d.setAttribute('cx', x); d.setAttribute('cy', ay); d.setAttribute('r', 2.1);
+        d.setAttribute('fill','#242018');
+        g.appendChild(d);
+      } else if(n.artic==='ten'){
+        const l = document.createElementNS(svgNS,'line');
+        l.setAttribute('x1', x-5); l.setAttribute('y1', ay); l.setAttribute('x2', x+5); l.setAttribute('y2', ay);
+        l.setAttribute('stroke','#242018'); l.setAttribute('stroke-width', 1.8); l.setAttribute('stroke-linecap','round');
+        g.appendChild(l);
+      } else if(n.artic==='accent'){
+        const p = document.createElementNS(svgNS,'path');
+        p.setAttribute('d', `M ${x-6} ${ay-3} L ${x+6} ${ay} L ${x-6} ${ay+3}`);
+        p.setAttribute('fill','none'); p.setAttribute('stroke','#242018'); p.setAttribute('stroke-width',1.8);
+        p.setAttribute('stroke-linecap','round'); p.setAttribute('stroke-linejoin','round');
+        g.appendChild(p);
+      }
     }
   }
   function drawRest(g, x, n){
