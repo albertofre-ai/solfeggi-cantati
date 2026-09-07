@@ -2655,12 +2655,16 @@ const INTONATION_SCALE_DATA = [
       dot.setAttribute('fill','#242018');
       g.appendChild(dot);
     }
-    // articolazione (staccato/tenuto/accento): sempre appena sotto la testa della nota, come
-    // nelle trascrizioni di riferimento fornite dall'utente — indipendentemente dalla direzione
-    // del gambo, per semplicità e coerenza visiva a colpo d'occhio. Non riguarda le pause: il
-    // segno di articolazione ha senso solo su un suono effettivamente prodotto.
+    // articolazione (staccato/tenuto/accento): sempre sotto il pentagramma (mai tra le righe),
+    // come nelle trascrizioni di riferimento fornite dall'utente — indipendentemente dalla
+    // direzione del gambo, per semplicità e coerenza visiva a colpo d'occhio. Per le note dentro
+    // o sopra il rigo il segno sta appena sotto l'ultima riga (STAFF_TOP+4*LINE_SPACING); per le
+    // note già sotto il rigo (con tagli addizionali) segue la testa della nota, restando comunque
+    // sotto di essa, altrimenti finirebbe sopra la nota o sovrapposto ai tagli addizionali. Non
+    // riguarda le pause: il segno di articolazione ha senso solo su un suono effettivamente prodotto.
     if(n.artic){
-      const ay = y + 9;
+      const staffBottom = STAFF_TOP + 4*LINE_SPACING;
+      const ay = Math.max(y + 9, staffBottom + 9);
       if(n.artic==='stacc'){
         const d = document.createElementNS(svgNS,'circle');
         d.setAttribute('cx', x); d.setAttribute('cy', ay); d.setAttribute('r', 2.1);
