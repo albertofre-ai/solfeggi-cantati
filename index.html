@@ -962,6 +962,36 @@
     ex11.status = 'draft';
   })();
 
+  // Esercizio 12 "Esercizio 12" — note e legature inserite a mano dall'utente nell'app e trascritte
+  // dagli screenshot del pannello note che ha fornito (nessun file JSON questa volta).
+  (function seedExercise12(){
+    const EX12_NOTES = [
+      {type:"note",name:"Mi",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:2,dot:false},
+      {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:2,dot:false},
+      {type:"note",name:"Mi",alt:"",oct:4,dur:1,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Do",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Si",alt:"",oct:3,dur:2,dot:false}, {type:"note",name:"La",alt:"",oct:3,dur:1,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:2,dot:false},
+      {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Si",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Do",alt:"",oct:5,dur:4,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:1,dot:false},
+      {type:"note",name:"La",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Si",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:5,dur:4,dot:false}, {type:"note",name:"Si",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"La",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:1,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Mi",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:1,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:2,dot:false},
+      {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Si",alt:"",oct:3,dur:2,dot:false},
+      {type:"note",name:"La",alt:"",oct:3,dur:1,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:2,dot:false}, {type:"rest",dur:2,dot:false}
+    ];
+    const ex12 = exercises[11]; // id 12
+    ex12.notes = EX12_NOTES;
+    ex12.title = "Esercizio 12";
+    ex12.tempoWord = "Lento";
+    ex12.timeSig = [4,4];
+    ex12.bpm = 50;
+    ex12.slurs = [{from:0,to:3},{from:4,to:8},{from:9,to:12},{from:13,to:17},{from:19,to:22},{from:23,to:27},{from:28,to:33},{from:34,to:37},{from:38,to:41},{from:42,to:46},{from:47,to:50},{from:51,to:55}];
+    ex12.status = 'draft';
+  })();
+
   // Esercizio 15 "Tempo di marcia" trascritto dal file MusicXML fornito dall'utente
   // (letto direttamente come dati strutturati, non da immagine: qui la lettura è esatta).
   (function seedExercise15(){
