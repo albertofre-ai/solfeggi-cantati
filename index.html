@@ -865,6 +865,103 @@
     ex8.status = 'draft';
   })();
 
+  // Esercizio 9 "Esercizio 9" — note e legature inserite a mano dall'utente nell'app e importate
+  // dal file di progressi esportato.
+  (function seedExercise9(){
+    const EX9_NOTES = [
+      {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:true}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:2,dot:false},
+      {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:true}, {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Si",alt:"",oct:3,dur:2,dot:false},
+      {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:true}, {type:"note",name:"La",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Si",alt:"",oct:4,dur:4,dot:true}, {type:"note",name:"Do",alt:"",oct:5,dur:8,dot:false},
+      {type:"note",name:"Si",alt:"",oct:4,dur:4,dot:true}, {type:"note",name:"La",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:true},
+      {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:true},
+      {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Si",alt:"",oct:3,dur:2,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:true},
+      {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:true}, {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:2,dot:false},
+      {type:"note",name:"Do",alt:"",oct:5,dur:2,dot:false}
+    ];
+    const ex9 = exercises[8]; // id 9
+    ex9.notes = EX9_NOTES;
+    ex9.title = "Esercizio 9";
+    ex9.tempoWord = "Andante";
+    ex9.timeSig = [2,4];
+    ex9.bpm = 50;
+    ex9.slurs = [{from:0,to:7},{from:8,to:15},{from:16,to:19},{from:20,to:23},{from:24,to:29},{from:31,to:35},{from:36,to:38},{from:39,to:43},{from:44,to:46},{from:47,to:50},{from:51,to:54},{from:55,to:59}];
+    ex9.status = 'draft';
+  })();
+
+  // Esercizio 10 "Esercizio 10" — note e legature inserite a mano dall'utente nell'app e importate
+  // dal file di progressi esportato.
+  (function seedExercise10(){
+    const EX10_NOTES = [
+      {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:5,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:2,dot:true}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:2,dot:false},
+      {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:2,dot:true},
+      {type:"note",name:"Re",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:true},
+      {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:2,dot:false}, {type:"rest",dur:4,dot:false},
+      {type:"note",name:"Re",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:true},
+      {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:2,dot:false}, {type:"rest",dur:4,dot:false},
+      {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:5,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:true},
+      {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"La",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Mi",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:true}, {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:true}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:2,dot:true}
+    ];
+    const ex10 = exercises[9]; // id 10
+    ex10.notes = EX10_NOTES;
+    ex10.title = "Esercizio 10";
+    ex10.tempoWord = "Andante";
+    ex10.timeSig = [3,4];
+    ex10.bpm = 50;
+    ex10.slurs = [{from:0,to:5},{from:6,to:9},{from:10,to:15},{from:16,to:19},{from:20,to:30},{from:32,to:42},{from:44,to:49},{from:50,to:54},{from:55,to:60},{from:61,to:65},{from:66,to:71},{from:72,to:75}];
+    ex10.status = 'draft';
+  })();
+
+  // Esercizio 11 "Esercizio 11" — note e legature inserite a mano dall'utente nell'app e importate
+  // dal file di progressi esportato.
+  (function seedExercise11(){
+    const EX11_NOTES = [
+      {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:2,dot:false},
+      {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:2,dot:false},
+      {type:"rest",dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:5,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Sol",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Re",alt:"",oct:4,dur:2,dot:false}, {type:"rest",dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:2,dot:false},
+      {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Do",alt:"",oct:5,dur:4,dot:false}, {type:"note",name:"Si",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"La",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:2,dot:false},
+      {type:"note",name:"Do",alt:"",oct:5,dur:4,dot:false}, {type:"note",name:"Si",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Si",alt:"",oct:4,dur:2,dot:true},
+      {type:"note",name:"Do",alt:"",oct:5,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:2,dot:false},
+      {type:"note",name:"Fa",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"La",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Sol",alt:"",oct:4,dur:2,dot:false}, {type:"rest",dur:4,dot:false}, {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:2,dot:false},
+      {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false},
+      {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Fa",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Sol",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:2,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Do",alt:"",oct:4,dur:2,dot:false},
+      {type:"note",name:"Re",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Mi",alt:"",oct:4,dur:8,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false}, {type:"note",name:"Re",alt:"",oct:4,dur:4,dot:false},
+      {type:"note",name:"Do",alt:"",oct:4,dur:2,dot:true}
+    ];
+    const ex11 = exercises[10]; // id 11
+    ex11.notes = EX11_NOTES;
+    ex11.title = "Esercizio 11";
+    ex11.tempoWord = "Lento";
+    ex11.timeSig = [3,4];
+    ex11.bpm = 50;
+    ex11.slurs = [{from:0,to:1},{from:2,to:3},{from:4,to:7},{from:9,to:10},{from:11,to:12},{from:13,to:16},{from:18,to:19},{from:20,to:21},{from:22,to:25},{from:26,to:29},{from:30,to:31},{from:32,to:35},{from:36,to:37},{from:38,to:39},{from:40,to:44},{from:46,to:47},{from:48,to:49},{from:50,to:54},{from:55,to:57},{from:58,to:59},{from:60,to:64}];
+    ex11.status = 'draft';
+  })();
+
   // Esercizio 15 "Tempo di marcia" trascritto dal file MusicXML fornito dall'utente
   // (letto direttamente come dati strutturati, non da immagine: qui la lettura è esatta).
   (function seedExercise15(){
@@ -2432,6 +2529,14 @@ const INTONATION_SCALE_DATA = [
     // Per ogni nota/pausa (non le stanghette), il punto in cui una legatura può agganciarsi:
     // centro orizzontale (cx) e margine libero sopra la nota (topY), usato per disegnare l'arco.
     const noteAnchors = [];
+    // Riferimento al <g> di ogni nota/pausa (non le stanghette), per poter disegnare il segno di
+    // articolazione in un passaggio finale, a valle di drawBeams.
+    const noteGroups = [];
+    // Per ogni nota con un gambo verso il basso (individuale o come parte di un gruppo travato),
+    // la y più bassa raggiunta da quel gambo/barra — usata per non sovrapporre il segno di
+    // articolazione al gambo o alla travatura. Resta null per le note con gambo verso l'alto (o
+    // senza gambo), dove non c'è questo rischio.
+    const articStemBottom = [];
     // Gruppi di travatura (1/8 e più brevi raggruppate invece di uncini individuali): calcolati
     // in anticipo (non serve la posizione x), poi popolati di geometria (cx/y) durante il ciclo
     // e disegnati in un passaggio finale, quando la x di tutte le note del gruppo è nota.
@@ -2465,6 +2570,7 @@ const INTONATION_SCALE_DATA = [
         }
       };
 
+      noteGroups[idx] = g;
       if(n.type==='rest'){
         drawRest(g, x + w/2, n);
         noteAnchors[idx] = {cx: x+w/2, topY: STAFF_TOP-4};
@@ -2482,8 +2588,10 @@ const INTONATION_SCALE_DATA = [
         if(gi !== -1){
           drawNote(g, x + w/2, y, step, n, {suppressStem:true});
           beamMemberGeom[idx] = {cx: x+w/2, y, dur: n.dur};
+          // il fondo del gambo di gruppo si conosce solo dopo drawBeams: valorizzato più sotto.
         } else {
-          drawNote(g, x + w/2, y, step, n);
+          const info = drawNote(g, x + w/2, y, step, n);
+          articStemBottom[idx] = info && info.stemDownBottomY;
         }
         noteAnchors[idx] = {cx: x+w/2, topY: y-14};
         if(showNames){
@@ -2516,7 +2624,34 @@ const INTONATION_SCALE_DATA = [
         : Math.max(...group.indices.map(i=> beamMemberGeom[i].y + 32));
       group.indices.forEach(i=>{
         if(noteAnchors[i]) noteAnchors[i].topY = Math.min(noteAnchors[i].topY, beamY - 4);
+        // Gambo di gruppo verso il basso: la barra/i gambi condivisi scendono fino a beamY, quindi
+        // anche il segno di articolazione delle note del gruppo deve restarne sotto (vedi sopra).
+        if(!group.stemUp) articStemBottom[i] = beamY;
       });
+    });
+    // Passaggio finale: disegna i segni di articolazione (staccato/tenuto/accento), ora che si
+    // conosce sia la posizione delle travature sia quella delle stanghette. Il segno sta sempre
+    // sotto l'ultima riga del pentagramma (mai tra le righe) e, quando la nota ha un gambo verso
+    // il basso — singolo o come parte di una travatura — anche sotto la punta di quel gambo/barra,
+    // altrimenti i due si sovrappongono visivamente (bug segnalato dall'utente).
+    const staffBottom = STAFF_TOP + 4*LINE_SPACING;
+    ex.notes.forEach((n,idx)=>{
+      if(n.type!=='note' || !n.artic) return;
+      const anchor = noteAnchors[idx];
+      if(!anchor) return;
+      const step = stepIndex(n.name, n.oct);
+      const y = yForStep(step);
+      const stemBottom = articStemBottom[idx];
+      const ay = Math.max(y + 9, staffBottom + 9, stemBottom!=null ? stemBottom + 9 : 0);
+      drawArtic(noteGroups[idx], anchor.cx, ay, n.artic);
+      // Se il nome della nota è visibile, la sua riga fissa (STAFF_TOP+5*LINE_SPACING+16) può
+      // finire troppo vicina al segno appena disegnato quando quest'ultimo è stato spinto più in
+      // basso per via di un gambo/travatura lunghi: in tal caso si abbassa anche l'etichetta.
+      const lbl = noteGroups[idx].querySelector('.note-label');
+      if(lbl){
+        const defaultLabelY = STAFF_TOP + 5*LINE_SPACING + 16;
+        lbl.setAttribute('y', Math.max(defaultLabelY, ay + 13));
+      }
     });
     renderSlurs(ex, noteAnchors);
     renderMeasureControls(measureMarkers, totalW);
@@ -2655,33 +2790,31 @@ const INTONATION_SCALE_DATA = [
       dot.setAttribute('fill','#242018');
       g.appendChild(dot);
     }
-    // articolazione (staccato/tenuto/accento): sempre sotto il pentagramma (mai tra le righe),
-    // come nelle trascrizioni di riferimento fornite dall'utente — indipendentemente dalla
-    // direzione del gambo, per semplicità e coerenza visiva a colpo d'occhio. Per le note dentro
-    // o sopra il rigo il segno sta appena sotto l'ultima riga (STAFF_TOP+4*LINE_SPACING); per le
-    // note già sotto il rigo (con tagli addizionali) segue la testa della nota, restando comunque
-    // sotto di essa, altrimenti finirebbe sopra la nota o sovrapposto ai tagli addizionali. Non
-    // riguarda le pause: il segno di articolazione ha senso solo su un suono effettivamente prodotto.
-    if(n.artic){
-      const staffBottom = STAFF_TOP + 4*LINE_SPACING;
-      const ay = Math.max(y + 9, staffBottom + 9);
-      if(n.artic==='stacc'){
-        const d = document.createElementNS(svgNS,'circle');
-        d.setAttribute('cx', x); d.setAttribute('cy', ay); d.setAttribute('r', 2.1);
-        d.setAttribute('fill','#242018');
-        g.appendChild(d);
-      } else if(n.artic==='ten'){
-        const l = document.createElementNS(svgNS,'line');
-        l.setAttribute('x1', x-5); l.setAttribute('y1', ay); l.setAttribute('x2', x+5); l.setAttribute('y2', ay);
-        l.setAttribute('stroke','#242018'); l.setAttribute('stroke-width', 1.8); l.setAttribute('stroke-linecap','round');
-        g.appendChild(l);
-      } else if(n.artic==='accent'){
-        const p = document.createElementNS(svgNS,'path');
-        p.setAttribute('d', `M ${x-6} ${ay-3} L ${x+6} ${ay} L ${x-6} ${ay+3}`);
-        p.setAttribute('fill','none'); p.setAttribute('stroke','#242018'); p.setAttribute('stroke-width',1.8);
-        p.setAttribute('stroke-linecap','round'); p.setAttribute('stroke-linejoin','round');
-        g.appendChild(p);
-      }
+    // Il segno di articolazione (staccato/tenuto/accento), se presente, NON si disegna qui: lo fa
+    // drawArtic in un passaggio finale di renderStaff, dopo che le travature (drawBeams) sono
+    // note. Questo perché un gambo verso il basso (nota singola o in gruppo travato) può scendere
+    // fin quasi al punto in cui il segno andrebbe disegnato, sovrapponendosi; il passaggio finale
+    // calcola il margine libero reale sotto ogni nota (gambo individuale o barra di gruppo) invece
+    // di una posizione fissa. Qui restituiamo solo il fondo del gambo individuale, se disegnato.
+    return { stemDownBottomY: (n.dur!==1 && !opts.suppressStem && !stemUp) ? (y+32) : null };
+  }
+  function drawArtic(g, x, ay, artic){
+    if(artic==='stacc'){
+      const d = document.createElementNS(svgNS,'circle');
+      d.setAttribute('cx', x); d.setAttribute('cy', ay); d.setAttribute('r', 2.1);
+      d.setAttribute('fill','#242018');
+      g.appendChild(d);
+    } else if(artic==='ten'){
+      const l = document.createElementNS(svgNS,'line');
+      l.setAttribute('x1', x-5); l.setAttribute('y1', ay); l.setAttribute('x2', x+5); l.setAttribute('y2', ay);
+      l.setAttribute('stroke','#242018'); l.setAttribute('stroke-width', 1.8); l.setAttribute('stroke-linecap','round');
+      g.appendChild(l);
+    } else if(artic==='accent'){
+      const p = document.createElementNS(svgNS,'path');
+      p.setAttribute('d', `M ${x-6} ${ay-3} L ${x+6} ${ay} L ${x-6} ${ay+3}`);
+      p.setAttribute('fill','none'); p.setAttribute('stroke','#242018'); p.setAttribute('stroke-width',1.8);
+      p.setAttribute('stroke-linecap','round'); p.setAttribute('stroke-linejoin','round');
+      g.appendChild(p);
     }
   }
   function drawRest(g, x, n){
